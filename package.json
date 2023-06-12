@@ -1,0 +1,14 @@
+{
+  "name": "simple-utils",
+  "version": "1.0.0",
+  "description": "simple utils",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "author": "sorryToPerson",
+  "license": "ISC"
+}
