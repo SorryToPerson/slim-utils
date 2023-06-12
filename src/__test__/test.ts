@@ -4,10 +4,10 @@
  * @LastEditors: xulibang
  * @LastEditTime: 2023-06-12 17:50:05
  * @FilePath: /slim-utils/src/__test__/test.ts
- * @Description: 
+ * @Description:
  */
-import { deepClone } from '../index'
+import { deepClone } from '../index';
 
 test('Deep Clone', () => {
-    expect(deepClone('Carl')).toBe('Carl');
+  expect(deepClone('Carl')).toBe('Carl');
 });
