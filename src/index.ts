@@ -2,8 +2,8 @@
  * @Author: xulibang
  * @Date: 2023-06-12 11:32:22
  * @LastEditors: xulibang
- * @LastEditTime: 2023-06-12 15:31:07
- * @FilePath: /slim-utils/index.ts
+ * @LastEditTime: 2023-06-12 17:50:31
+ * @FilePath: /slim-utils/src/index.ts
  * @Description:
  */
 
@@ -11,7 +11,7 @@
  * @description: 深拷贝
  * @return {*}
  */
-const deepClone = (obj: any) => {
+export const deepClone = (obj: any) => {
     if (obj === null) return obj;
     if (obj instanceof Date) return new Date(obj);
     if (obj instanceof RegExp) return new RegExp(obj);
@@ -25,6 +25,4 @@ const deepClone = (obj: any) => {
     return cloneObj;
 }
 
-module.exports = {
-    deepClone
-};
+
