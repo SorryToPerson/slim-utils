@@ -63,15 +63,16 @@ export class SlimConsole {
       if (text) {
         console.log(
           `%c ${title} %c ${text} %c`,
-          `background:${color};border:1px solid ${color}; padding: 1px; border-radius: 2px 0 0 2px; color: #fff; font-size: ${this.options.fontSize};`,
-          `border:1px solid ${color}; padding: 1px; border-radius: 0 2px 2px 0; color: ${color}; font-size: ${this.options.fontSize};`,
-          'background:transparent',
+          `background:${color};border:1px solid ${color}; padding: 1px; border-radius: 2px 0 0 2px; color: #fff; font-size: ${this.options.fontSize}px;`,
+          `border:1px solid ${color}; padding: 1px; border-radius: 0 2px 2px 0; color: ${color}; font-size: ${this.options.fontSize}px;`,
+          `background:transparent; font-size: ${this.options.fontSize}px;`,
           ...arr,
         );
       } else {
         console.log(
-          `%c ${title} `,
-          `background:${color};border:1px solid ${color}; padding: 1px; border-radius: 2px 0 0 2px; color: #fff; font-size: ${this.options.fontSize};`,
+          `%c ${title} %c`,
+          `background:${color};border:1px solid ${color}; padding: 1px; border-radius: 2px 0 0 2px; color: #fff; font-size: ${this.options.fontSize}px;`,
+          `background:transparent; font-size: ${this.options.fontSize}px;`,
           ...arr,
         );
       }
