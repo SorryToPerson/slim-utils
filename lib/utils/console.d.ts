@@ -1,7 +1,8 @@
-import type { Config, ConfigType } from '../typings/console';
+import type { Config, ConfigType, Options } from '../typings/console';
 export declare class SlimConsole {
     config: Config;
-    constructor(config?: Config | ConfigType);
+    options: Options;
+    constructor(config?: Config | ConfigType, options?: Options);
     private _log;
     log(...args: any[]): void;
     info(...args: any[]): void;

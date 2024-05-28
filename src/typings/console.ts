@@ -15,3 +15,8 @@ export type ConfigType =
 export type ConfigEnumType = {
   [key in ConfigType]: Config;
 };
+
+export type Options = {
+  timestamp?: boolean;
+  fontSize?: number;
+};

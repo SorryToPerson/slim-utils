@@ -6,3 +6,7 @@ export type ConfigType = 'default' | 'light' | 'dark' | 'pastel' | 'vibrant' | '
 export type ConfigEnumType = {
     [key in ConfigType]: Config;
 };
+export type Options = {
+    timestamp?: boolean;
+    fontSize?: number;
+};

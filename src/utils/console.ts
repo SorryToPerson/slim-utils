@@ -4,9 +4,9 @@ import {
   fontColorEnum,
   configEnum,
 } from '../enums/console';
-import type { LogType, Config, ConfigType } from '../typings/console';
+import type { LogType, Config, ConfigType, Options } from '../typings/console';
 
-const check = (type: LogType, args: any[]) => {
+const check = (type: LogType, args: any[], options: Options) => {
   let title: LogType | string = type;
   let text = '';
   let arr = args;
@@ -16,11 +16,15 @@ const check = (type: LogType, args: any[]) => {
     if (typeof args[0] === 'string') {
       title = args[0];
       arr = args.slice(1);
-      if (args[1] && typeof args[1] === 'string') {
+      if (args[1] && typeof args[1] === 'string' && !options.timestamp) {
         text = args[1];
         arr = args.slice(2);
       }
     }
+  }
+
+  if (options.timestamp) {
+    text = new Date().getTime().toString();
   }
 
   return {
@@ -32,15 +36,26 @@ const check = (type: LogType, args: any[]) => {
 
 export class SlimConsole {
   config: Config = configEnum.default;
-  constructor(config: Config | ConfigType = 'default') {
+  options: Options = {
+    timestamp: false,
+    fontSize: 14,
+  };
+  constructor(config: Config | ConfigType = 'default', options?: Options) {
     if (typeof config === 'string') {
       this.config = configEnum[config];
     } else {
       this.config = config;
     }
+
+    if (options) {
+      this.options = {
+        ...this.options,
+        ...options,
+      };
+    }
   }
   private _log(type: LogType, ...args) {
-    const { title, text, arr } = check(type, args);
+    const { title, text, arr } = check(type, args, this.options);
 
     if (typeof window !== 'undefined') {
       // 在浏览器环境中
@@ -48,15 +63,15 @@ export class SlimConsole {
       if (text) {
         console.log(
           `%c ${title} %c ${text} %c`,
-          `background:${color};border:1px solid ${color}; padding: 1px; border-radius: 2px 0 0 2px; color: #fff;`,
-          `border:1px solid ${color}; padding: 1px; border-radius: 0 2px 2px 0; color: ${color};`,
+          `background:${color};border:1px solid ${color}; padding: 1px; border-radius: 2px 0 0 2px; color: #fff; font-size: ${this.options.fontSize};`,
+          `border:1px solid ${color}; padding: 1px; border-radius: 0 2px 2px 0; color: ${color}; font-size: ${this.options.fontSize};`,
           'background:transparent',
           ...arr,
         );
       } else {
         console.log(
           `%c ${title} `,
-          `background:${color};border:1px solid ${color}; padding: 1px; border-radius: 2px 0 0 2px; color: #fff;`,
+          `background:${color};border:1px solid ${color}; padding: 1px; border-radius: 2px 0 0 2px; color: #fff; font-size: ${this.options.fontSize};`,
           ...arr,
         );
       }
