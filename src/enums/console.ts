@@ -14,19 +14,19 @@ export const backColorEnum = {
   black: '\x1b[40m', // 背景黑色
   red: '\x1b[41m', //背景红色
   green: '\x1b[42m', // 背景绿色
-  yellow: '\x1b[44m', // 背景换色
+  yellow: '\x1b[43m', // 背景黄色
   blue: '\x1b[44m', // 背景蓝色
   magenta: '\x1b[45m', // 背景紫色
   cyan: '\x1b[46m', // 背景深绿
   white: '\x1b[47m', // 背景白色
-  gray: '\x1b[2m\x1b[40m', // 字体灰色
+  gray: '\x1b[2m\x1b[40m', // 背景灰色
 };
 
 export const fontColorEnum = {
   black: '\x1b[30m', // 字体黑色
   red: '\x1b[31m', //字体红色
   green: '\x1b[32m', // 字体绿色
-  yellow: '\x1b[33m', // 字体换色
+  yellow: '\x1b[33m', // 字体黄色
   blue: '\x1b[34m', // 字体蓝色
   magenta: '\x1b[35m', // 字体紫色
   cyan: '\x1b[36m', // 字体深绿
