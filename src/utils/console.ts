@@ -55,7 +55,7 @@ export class SlimConsole {
         );
       } else {
         console.log(
-          `%c ${title}`,
+          `%c ${title} `,
           `background:${color};border:1px solid ${color}; padding: 1px; border-radius: 2px 0 0 2px; color: #fff;`,
           ...arr,
         );
