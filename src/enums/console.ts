@@ -36,24 +36,45 @@ export const fontColorEnum = {
 
 export const configEnum: ConfigEnumType = {
   default: {
-    Info: '#3e83f9',
+    Info: '#909090',
     Primary: '#3e83f9',
     Warn: '#eca72e',
     Error: '#e95449',
     Success: '#64b82f',
   },
   light: {
-    Info: '#599aff', // 更浅的蓝色，增加对比度
+    Info: '#b3b3b3',
     Primary: '#599aff',
-    Warn: '#ffce54', // 更亮的黄色，增加对比度
-    Error: '#ff7b68', // 更浅的红色，增加对比度
-    Success: '#7ad849', // 更亮的绿色，增加对比度
+    Warn: '#ffce54',
+    Error: '#ff7b68',
+    Success: '#7ad849',
   },
   dark: {
-    Info: '#2a7def', // 更深的蓝色，增加对比度
+    Info: '#303030',
     Primary: '#2a7def',
-    Warn: '#d99a00', // 更深的黄色，增加对比度
-    Error: '#c44237', // 更深的红色，增加对比度
-    Success: '#4cb427', // 更深的绿色，增加对比度
+    Warn: '#d99a00',
+    Error: '#c44237',
+    Success: '#4cb427',
+  },
+  pastel: {
+    Info: '#e0e0e0',
+    Primary: '#b3d4fc',
+    Warn: '#ffd8aa',
+    Error: '#ffbaba',
+    Success: '#c0e8c0',
+  },
+  vibrant: {
+    Info: '#77b3ff',
+    Primary: '#448aff',
+    Warn: '#ff9100',
+    Error: '#ff5252',
+    Success: '#69f0ae',
+  },
+  neutral: {
+    Info: '#9e9e9e',
+    Primary: '#90caf9',
+    Warn: '#ffa07a',
+    Error: '#b04040',
+    Success: '#98fb98',
   },
 };
