@@ -43,17 +43,17 @@ export const configEnum: ConfigEnumType = {
     Success: '#64b82f',
   },
   light: {
-    Info: '#3e83f9',
-    Primary: '#3e83f9',
-    Warn: '#eca72e',
-    Error: '#e95449',
-    Success: '#64b82f',
+    Info: '#599aff', // 更浅的蓝色，增加对比度
+    Primary: '#599aff',
+    Warn: '#ffce54', // 更亮的黄色，增加对比度
+    Error: '#ff7b68', // 更浅的红色，增加对比度
+    Success: '#7ad849', // 更亮的绿色，增加对比度
   },
   dark: {
-    Info: '#3e83f9',
-    Primary: '#3e83f9',
-    Warn: '#eca72e',
-    Error: '#e95449',
-    Success: '#64b82f',
+    Info: '#2a7def', // 更深的蓝色，增加对比度
+    Primary: '#2a7def',
+    Warn: '#d99a00', // 更深的黄色，增加对比度
+    Error: '#c44237', // 更深的红色，增加对比度
+    Success: '#4cb427', // 更深的绿色，增加对比度
   },
 };
