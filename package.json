@@ -1,6 +1,6 @@
 {
   "name": "slim-utils",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "description": "slim utils",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
